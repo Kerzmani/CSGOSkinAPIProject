@@ -1,0 +1,33 @@
+  body {
+    height: 100vh;
+  }
+
+  #app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #15171c;
+  }
+  
+  
+  #app.dark-theme {
+    background-color: #f5f5f5;
+  }
+
+  #app.dark-theme body {
+    color: #000000;
+  }
+
+  #app.dark-theme .nav__bar {
+    background-color: #191919;
+  }
+
+ #app.dark-theme .filter-label {
+    background-color: #1b1d24cc;
+  }
+  #app.dark-theme .filter-label:hover {
+    background-color: #c0c0c0;
+  }
+  #app.dark-theme h1{
+    color: black;
+  }

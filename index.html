@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/4c2b00dcda.js" crossorigin="anonymous"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Crimson+Text:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Crimson+Text:wght@400;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <script src="index.js" defer></script>
+</head>
+<body>
+  <div class="skins" id="app">
+    <div class="skins-content">
+
+        <!-- HEADER/NAV-->
+
+
+      <header class="nav__bar">
+        <div class="nav__bar--content">
+          <img src="assets/SQLogoFinal.png" class="logo" alt="">
+          <div class="nav__links">
+            <div class="link">  
+              <a href="#" class="link--anchor">Home</a>
+            </div>
+            <div class="link">  
+              <a href="browse.html" class="link--anchor">Browse</a>
+            </div>
+            <div class="link link--aux">
+              <a href="#" class="link--anchor">Contact</a>
+            </div>
+            <div class="toggle-contrast" onclick="toggleDarkTheme()">
+              <i class="fa-solid fa-sun red"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- LANDING PAGE -->
+
+
+      <section class="landingpage" id="landing-page">
+          <div class="main-content">
+            <div class="main-content--text">
+              <h1>
+                Finding that perfect skin just got <span class="red">easier</span>
+              </h1>
+            </div>
+            <div class="search-wrapper">
+            <input type="text" class="content-searchbar" placeholder="Asiimov...">
+            <button class="search-btn">
+              <i class="fa-solid fa-crosshairs"></i>
+            </button>
+            </div>
+            <div class="loading" style="display: none;">
+              <i class="fa-solid fa-spinner fa-spin"></i>
+            </div>
+            <div class="search-results"></div>
+            <div class="skin-modal">
+              <div class="modal-content"></div>
+            </div>
+            <div class="itemData">
+              <img src="#" alt="" class="itemData--img">
+              <div class="itemDataText">
+                <h4 class="itemData--name"></h4>
+                <h4 class="itemData--rarity"></h4>
+                <h4 class="itemData--description"></h4>
+              </div>
+            </div>
+          <div class="image__test">
+            <div class="item">
+              <img src="#" alt="" class = skinImg>
+            </div>
+            <div class="item--name">
+              <h4 class="name"></h4>
+              <h4 class="rarity"></h4>
+            </div>
+          </div>
+         
+          </div>
+        </section>
+    </div>
+  </div>
+    
+</body>
+</html>
