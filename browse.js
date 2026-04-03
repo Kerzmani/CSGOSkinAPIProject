@@ -5,10 +5,40 @@ let selectedCategories = new Set();
 let selectedRarities = new Set();
 
 const categoryCheckboxes = document.querySelectorAll('.category-checkbox');
+const categoryDropdownCheckboxes = document.querySelectorAll('.category-dropdown-checkbox');
+const categoryDropdownToggle = document.querySelector('.category-dropdown-toggle');
+const categoryDropdownMenu = document.querySelector('.category-dropdown-menu');
 const rarityCheckboxes = document.querySelectorAll('.rarity-checkbox');
+const rarityDropdownCheckboxes = document.querySelectorAll('.rarity-dropdown-checkbox');
+const rarityDropdownToggle = document.querySelector('.rarity-dropdown-toggle');
+const rarityDropdownMenu = document.querySelector('.rarity-dropdown-menu');
 const searchBtn = document.querySelector('.search-btn');
 const loadingDiv = document.querySelector('.loading');
 const searchInput = document.querySelector('.content-searchbar');
+
+// Toggle category dropdown menu
+if (categoryDropdownToggle) {
+  categoryDropdownToggle.addEventListener('click', () => {
+    categoryDropdownMenu.classList.toggle('active');
+  });
+}
+
+// Toggle rarity dropdown menu
+if (rarityDropdownToggle) {
+  rarityDropdownToggle.addEventListener('click', () => {
+    rarityDropdownMenu.classList.toggle('active');
+  });
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.category-dropdown-wrapper')) {
+    categoryDropdownMenu?.classList.remove('active');
+  }
+  if (!e.target.closest('.rarity-dropdown-wrapper')) {
+    rarityDropdownMenu?.classList.remove('active');
+  }
+});
 
 // Add event listeners to category checkboxes
 categoryCheckboxes.forEach(checkbox => {
@@ -26,6 +56,23 @@ categoryCheckboxes.forEach(checkbox => {
   });
 });
 
+// Add event listeners to category dropdown checkboxes
+categoryDropdownCheckboxes.forEach(checkbox => {
+  checkbox.addEventListener('change', (event) => {
+    const value = event.target.value;
+    const isChecked = event.target.checked;
+    
+    if (isChecked) {
+      selectedCategories.add(value);
+    } else {
+      selectedCategories.delete(value);
+    }
+    
+    console.log('Selected categories:', Array.from(selectedCategories));
+    executeBrowseSearch();
+  });
+});
+
 // Add event listeners to rarity checkboxes
 rarityCheckboxes.forEach(checkbox => {
   checkbox.addEventListener('change', (event) => {
@@ -39,6 +86,23 @@ rarityCheckboxes.forEach(checkbox => {
     }
     
     console.log('Selected rarities:', Array.from(selectedRarities));
+  });
+});
+
+// Add event listeners to rarity dropdown checkboxes
+rarityDropdownCheckboxes.forEach(checkbox => {
+  checkbox.addEventListener('change', (event) => {
+    const value = event.target.value;
+    const isChecked = event.target.checked;
+    
+    if (isChecked) {
+      selectedRarities.add(value);
+    } else {
+      selectedRarities.delete(value);
+    }
+    
+    console.log('Selected rarities:', Array.from(selectedRarities));
+    executeBrowseSearch();
   });
 });
 

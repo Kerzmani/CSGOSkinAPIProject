@@ -126,14 +126,6 @@ document.addEventListener('click', (event) => {
   }
 });
 
-// const resultImages = document.querySelectorAll('.result-skin .skin-image');
-// resultImages.forEach(img => {
-//   img.addEventListener('click', (event) => {
-//     
-
-//   }
-// }
-
 
 // FETCH SKINS DATA AND START SLIDESHOW
 async function getSkinData() {
