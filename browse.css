@@ -31,3 +31,21 @@
   #app.dark-theme h1{
     color: black;
   }
+
+
+  @media (min-width: 64rem) {
+   .nav__bar{
+    min-width: 50rem;
+    width: 100%;
+  }
+
+  .nav__links {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .logo {
+    width: 20rem;
+    height: auto;
+  }
+  }
