@@ -2,8 +2,28 @@
 // ALL ITEMS API - GET https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/all.json
 // SKINS API W RARIY GROUPING - GET https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/skins.json
 
+
+// NAVIGATION MODAL TOGGLE 
+let isModalOpen = false;
+function toggleModal() {
+  if (isModalOpen) {
+    document.body.classList.remove("modal__menu--open");
+    isModalOpen = false;
+    console.log("NAV MODAL CLOSED");
+    return;
+  }
+  isModalOpen = true;
+  document.body.classList.toggle("modal__menu--open");
+  console.log("NAV MODAL OPENED");
+}
+
+
+
+
+
+
 // Store all skins data globally for modal access
-let allSkinsData = [];
+let allSkinsData = [];``
 
 // SEARCH SKINS FUNCTION
 async function searchSkins(query) {

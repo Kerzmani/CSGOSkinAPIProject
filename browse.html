@@ -37,6 +37,9 @@
               <i class="fa-solid fa-sun red"></i>
             </div>
           </div>
+          <div class="nav__modal-btn">
+              <i class="fa-solid fa-bars modal__menu--btnopen" onclick="toggleModal()"></i>
+          </div>
         </div>
       </header>
 
@@ -65,15 +68,11 @@
               </label>
               <label class="filter-label">
                 <input type="checkbox" value="Rifles" class="category-checkbox">
-                <span>Assault Rifles</span>
+                <span>Rifles</span>
               </label>
               <label class="filter-label">
                 <input type="checkbox" value="Heavy" class="category-checkbox">
                 <span>Heavy</span>
-              </label>
-              <label class="filter-label">
-                <input type="checkbox" value="Rifles" class="category-checkbox" data-display="AWP">
-                <span>AWP</span>
               </label>
               <label class="filter-label">
                 <input type="checkbox" value="Pistols" class="category-checkbox">
@@ -97,15 +96,11 @@
                 </label>
                 <label class="dropdown-option">
                   <input type="checkbox" value="Rifles" class="category-dropdown-checkbox">
-                  <span>Assault Rifles</span>
+                  <span>Rifles</span>
                 </label>
                 <label class="dropdown-option">
                   <input type="checkbox" value="Heavy" class="category-dropdown-checkbox">
                   <span>Heavy</span>
-                </label>
-                <label class="dropdown-option">
-                  <input type="checkbox" value="Rifles" class="category-dropdown-checkbox" data-display="AWP">
-                  <span>AWP</span>
                 </label>
                 <label class="dropdown-option">
                   <input type="checkbox" value="Pistols" class="category-dropdown-checkbox">
@@ -191,8 +186,28 @@
             </div>
           </div>
         </section>
+      </div>
+      <div class="modal__menu">
+        <div class="modal__half modal__menu--content">
+          <i class="fa-solid fa-xmark modal__menu--closebtn" onclick="toggleModal()"></i>
+          <div class="modal__links">
+            <div class="modal__link">  
+              <a href="index.html" class="modal__link--anchor">Home</a>
+            </div>
+            <div class="modal__link">  
+              <a href="browse.html" class="modal__link--anchor">Browse</a>
+            </div>
+            <div class="modal__link">
+              <a href="#" class="modal__link--anchor">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal__half modal__menu--bottom">
+          Some sort of graphics here
+        </div>
+      </div>
     </div>
-  </div>
+</body>
     
 </body>
 </html>

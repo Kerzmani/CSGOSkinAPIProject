@@ -1,5 +1,21 @@
 // Browse page category filtering logic
 
+
+
+let isModalOpen = false;
+function toggleModal() {
+  if (isModalOpen) {
+    document.body.classList.remove("modal__menu--open");
+    isModalOpen = false;
+    console.log("NAV MODAL CLOSED");
+    return;
+  }
+  isModalOpen = true;
+  document.body.classList.toggle("modal__menu--open");
+  console.log("NAV MODAL OPENED");
+}
+
+
 let allBrowseSkinsData = [];
 let selectedCategories = new Set();
 let selectedRarities = new Set();
