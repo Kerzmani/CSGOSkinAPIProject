@@ -626,7 +626,7 @@ a{
     width: 80%;
     height: 80%;
     border-radius: .5rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
@@ -637,7 +637,7 @@ a{
   }
 
   .modal__menu--btnopen {
-    display: block;
+    display: none;
   }
 
   
@@ -751,6 +751,38 @@ a{
 
 
 
+/* FOOTER */
+
+.footer {
+  width: 100%;
+  background-color: #15171c;
+  color: #d3d3d3;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #31353e;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Dark theme footer */
+.dark-theme .footer {
+  background-color: #1b1d24;
+  color: #9da5af;
+  border-top-color: #31353e;
+}
+
+
 /* Medida Qs */
 
 
@@ -768,6 +800,14 @@ a{
   .nav__bar {
     min-width: 35rem;
     width: 100%;
+  }
+
+  .modal__menu {
+    display: flex;
+  }
+
+  .modal__menu--btnopen {
+    display: block;
   }
 
   .main-content--text h1 {
@@ -1360,7 +1400,11 @@ a{
     width: 25%;
   }
 
-  .modal_menu {
+  .modal__menu {
+    display: none;
+  }
+
+  .modal__menu--btnopen {
     display: none;
   }
 }
@@ -1414,7 +1458,11 @@ a{
     width: 25%;
   }
 
-  .modal_menu {
+  .modal__menu {
+    display: none;
+  }
+
+  .modal__menu--btnopen {
     display: none;
   }
 }
@@ -1422,5 +1470,16 @@ a{
 @media(min-width: 64rem) and (max-width: 96rem) {
   .nav__modal-btn {
     display: none;
+  }
+}
+
+/* Ensure modal stays hidden at all screen widths 1024px and larger */
+@media(min-width: 64rem) {
+  .modal__menu {
+    display: none !important;
+  }
+
+  .modal__menu--btnopen {
+    display: none !important;
   }
 }
